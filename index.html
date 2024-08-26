@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es-co">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <title>Encriptador</title>
+</head>
+<body>
+    <header>
+        <img class="logo" src="./img/Logo.png" alt="logo de alura">
+    </header> 
+    <main >
+        <section class="izquierdo">
+            <textarea class="text-area" cols="30" rows="10" onkeyup="this.value=validacion(this.value)" placeholder="Ingrese el texto aqui"></textarea>
+                <div class="texto_informativo">
+                <img class="imagen_informacion" src="./img/Group.png" alt="exclamacion">
+                <p class="informacion">Solo letras minúsculas y sin acentos</p>
+            </div>
+            <div class="botones">
+                <button class="btn-encriptar" onclick= btnEncriptar() >Encriptar</button>
+                <button class="btn-desencriptar" onclick = btnDesencriptar() >Desencriptar</button>
+            </div>
+        </section>
+        <section class="derecho" >
+            <textarea id="textoCopiado" class="mensaje" cols="10" rows="9" ></textarea>
+            <div> 
+                <h2 class="mensajeUno">Ningún mensaje fue encontrado</h2>
+                <p class="textoUno">Ingresa el texto que desees encriptar o desencriptar.</p>
+            </div>
+            <div class="copiar">
+                <button class="btn-copiar" onclick= copiar() hidden >Copiar</button>
+            </div> 
+        </section>
+    </main> 
+    <script src="./script.js"></script>  
+<footer class="footer">Ingrid Julieth Caicedo Rey</footer>
+</body>
+</html>
